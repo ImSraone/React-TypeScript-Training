@@ -25,7 +25,6 @@ class ProductList extends React.Component<productListProps> {
     }];
     return (
       <div>
-        {"Sravan : " + this.props.selectedCurrency}
         {
           pList.map(value => <Product code={this.props.selectedCurrency} pData={value} key={value.productId} />)
         }
