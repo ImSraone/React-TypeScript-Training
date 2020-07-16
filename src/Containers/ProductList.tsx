@@ -2,7 +2,11 @@ import React from "react";
 import Product from "../Components/Product";
 import ProductModel from "../Models/Product-Model";
 
-class ProductList extends React.Component {
+interface productListProps {
+  selectedCurrency: string
+}
+
+class ProductList extends React.Component<productListProps> {
   render() {
     const pList: ProductModel[] = [{
       productId: 1000,
@@ -21,8 +25,9 @@ class ProductList extends React.Component {
     }];
     return (
       <div>
+        {"Sravan : " + this.props.selectedCurrency}
         {
-          pList.map(value => <Product pData={value} key={value.productId} />)
+          pList.map(value => <Product code={this.props.selectedCurrency} pData={value} key={value.productId} />)
         }
       </div>
     );

@@ -7,13 +7,12 @@ import Curency from "./Components/Currency";
 import ProductList from "./Containers/ProductList";
 
 function App() {
+  let CurrencyCode: string = "INR";
   return (
     <div className="App">
 
-      {/* <Demo /> */}
-      {/* <Product /> */}
-      <Curency></Curency>
-      <ProductList></ProductList>
+      <Curency currencyChange={((code) => CurrencyCode = code)}></Curency>
+      <ProductList selectedCurrency={CurrencyCode}></ProductList>
 
     </div>
   );
