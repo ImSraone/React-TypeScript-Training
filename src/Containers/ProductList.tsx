@@ -15,6 +15,7 @@ class ProductList extends React.Component {
     return (
       <div>
         <Product pData={pList} />
+        <Product pData={pList} wishList={true} />
       </div>
     );
   }
